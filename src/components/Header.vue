@@ -38,6 +38,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/sass/_vars.scss";
+
 * {
   color: black;
   text-transform: uppercase;
@@ -64,7 +66,7 @@ ul {
       &:hover,
       &.active,
       &.active {
-        color: #0282f9;
+        color: $main-color;
         border-bottom: 5px solid blue;
       }
     }

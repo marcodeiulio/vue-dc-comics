@@ -23,8 +23,7 @@ export default {
 
 <style lang="scss">
 // TODO Dividere stile nei vari fogli scss
-@import url("./assets/sass/style.scss");
-
+@import url(./assets/sass/style.scss);
 * {
   font-family: "Segoe UI", "Open Sans", Helvetica, sans-serif;
 }

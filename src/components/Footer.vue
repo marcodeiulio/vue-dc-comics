@@ -24,7 +24,7 @@
           <h2>Follow Us</h2>
           <a v-for="social in socials" :key="social.icon" :href="social.href">
             <img
-              :src="`../assets/img/footer-${social.icon}.png`"
+              :src="require(`../assets/img/footer-${social.icon}.png`)"
               :alt="social.alt"
             />
           </a>
@@ -47,22 +47,22 @@ export default {
         },
         {
           href: "#",
-          icon: "../assets/img/footer-twitter.png",
+          icon: "twitter",
           alt: "Twitter Logo",
         },
         {
           href: "#",
-          icon: "../assets/img/footer-youtube.png",
+          icon: "youtube",
           alt: "YouTube Logo",
         },
         {
           href: "#",
-          icon: "../assets/img/footer-pinterest.png",
+          icon: "pinterest",
           alt: "Pinterest Logo",
         },
         {
           href: "#",
-          icon: "../assets/img/footer-periscope.png",
+          icon: "periscope",
           alt: "Periscope Logo",
         },
       ],
