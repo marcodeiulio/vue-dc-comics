@@ -5,11 +5,9 @@
     </figure>
     <nav>
       <ul>
-        <li><a href="#">characters</a></li>
-        <li><a href="#">comics</a></li>
-        <li><a href="#">movies</a></li>
-        <li><a href="#">tv</a></li>
-        <li><a href="#">games</a></li>
+        <li v-for="link in links" :key="link.text">
+          <a :class="{ active: link.active }" href="#">{{ link.text }}</a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -18,6 +16,22 @@
 <script>
 export default {
   name: "Header",
+  data() {
+    return {
+      links: [
+        { text: "characters", url: "#", active: false },
+        { text: "comics", url: "#", active: true },
+        { text: "movies", url: "#", active: false },
+        { text: "tv", url: "#", active: false },
+        { text: "games", url: "#", active: false },
+        { text: "collectibles", url: "#", active: false },
+        { text: "videos", url: "#", active: false },
+        { text: "fans", url: "#", active: false },
+        { text: "news", url: "#", active: false },
+        { text: "shop", url: "#", active: false },
+      ],
+    };
+  },
 };
 </script>
 
@@ -37,13 +51,17 @@ header {
 
 ul {
   list-style-type: none;
+
   li {
     display: inline-block;
     padding: 0 10px;
+
     a {
       text-decoration: none;
       padding: 30px 0;
-      &:hover {
+
+      &:hover,
+      &.active {
         color: #0282f9;
       }
     }
