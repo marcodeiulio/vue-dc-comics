@@ -67,6 +67,34 @@
 <script>
 export default {
   name: "Footer",
+  data() {
+    return {
+      navs: [
+        {
+          title: "DC",
+          links: [
+            { text: "characters", url: "#" },
+            { text: "comics", url: "#", active: true },
+            { text: "movies", url: "#" },
+            { text: "tv", url: "#" },
+            { text: "games", url: "#" },
+            { text: "collectibles", url: "#" },
+            { text: "videos", url: "#" },
+            { text: "fans", url: "#" },
+            { text: "news", url: "#" },
+            { text: "shop", url: "#" },
+          ],
+        },
+        {
+          title: "Shop",
+          links: [
+            { text: "shop dc", url: "#" },
+            { text: "shop dc collectibles", url: "#" },
+          ],
+        },
+      ],
+    };
+  },
 };
 </script>
 
