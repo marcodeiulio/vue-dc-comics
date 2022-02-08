@@ -1,7 +1,7 @@
 <template>
   <header class="container">
     <figure>
-      <img src="../assets/img/dc-logo.png" alt="DC Logo" />
+      <a href="#"><img src="../assets/img/dc-logo.png" alt="DC Logo" /></a>
     </figure>
     <nav>
       <ul>
@@ -48,7 +48,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
 }
 
 ul {
@@ -56,15 +55,17 @@ ul {
 
   li {
     display: inline-block;
-    padding: 0 10px;
+    padding: 60px 10px;
 
     a {
       text-decoration: none;
-      padding: 30px 0;
+      padding: 60px 0 55px 0;
 
       &:hover,
+      &.active,
       &.active {
         color: #0282f9;
+        border-bottom: 5px solid blue;
       }
     }
   }
