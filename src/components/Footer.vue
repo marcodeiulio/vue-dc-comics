@@ -3,7 +3,15 @@
     <section id="upper-footer">
       <div class="container">
         <div id="footer-links" class="col-2">
-          <nav>
+          <nav v-for="nav in navs" :key="nav.title">
+            <h3>{{ nav.title }}</h3>
+            <ul>
+              <li v-for="link in nav.links" :key="link.text">
+                <a href=""> {{ link.text }} </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- <nav>
             <h3>DC Comics</h3>
             <ul>
               <li><a href="#">Characters</a></li>
@@ -31,7 +39,7 @@
               <li><a href="#">Videos</a></li>
               <li><a href="#">News</a></li>
             </ul>
-          </nav>
+          </nav> -->
         </div>
         <div id="footer-logo" class="col-2"></div>
       </div>
@@ -71,7 +79,7 @@ export default {
     return {
       navs: [
         {
-          title: "DC",
+          title: "DC Comics",
           links: [
             { text: "characters", url: "#" },
             { text: "comics", url: "#", active: true },
@@ -90,6 +98,32 @@ export default {
           links: [
             { text: "shop dc", url: "#" },
             { text: "shop dc collectibles", url: "#" },
+          ],
+        },
+        {
+          title: "DC",
+          links: [
+            { text: "terms of use", url: "#" },
+            { text: "privacy policy", url: "#" },
+            { text: "ad choices", url: "#" },
+            { text: "advertising", url: "#" },
+            { text: "jobs", url: "#" },
+            { text: "subscriptions", url: "#" },
+            { text: "talent workshop", url: "#" },
+            { text: "CPSC certificates", url: "#" },
+            { text: "ratings", url: "#" },
+            { text: "shop help", url: "#" },
+            { text: "contact us", url: "#" },
+          ],
+        },
+        {
+          title: "sites",
+          links: [
+            { text: "DC", url: "#" },
+            { text: "MAD magazine", url: "#" },
+            { text: "DC kids", url: "#" },
+            { text: "DC universe", url: "#" },
+            { text: "DC power visa", url: "#" },
           ],
         },
       ],
@@ -126,10 +160,12 @@ export default {
   ul {
     list-style-type: none;
     li {
-      padding: 5px 0;
+      padding: 3px 0;
       a {
+        font-size: 0.8rem;
         padding: 10px 0;
         color: #797979;
+        text-transform: capitalize;
         &:hover {
           text-decoration: underline;
         }
