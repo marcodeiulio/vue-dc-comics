@@ -134,11 +134,8 @@ export default {
 
 <style lang="scss" scoped>
 #upper-footer {
-  /* 
-  TODO da modificare */
-  height: 400px;
+  height: 450px;
   width: 100%;
-
   background-image: url("../assets/img/footer-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -150,7 +147,7 @@ export default {
   h3 {
     text-transform: uppercase;
     color: white;
-    margin: 20px 0;
+    margin: 15px 0;
   }
 
   nav {
@@ -175,13 +172,13 @@ export default {
 }
 
 .col-2 {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 30px 0;
 }
 
 #footer-links {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 #footer-logo {
