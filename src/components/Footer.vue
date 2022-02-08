@@ -11,35 +11,6 @@
               </li>
             </ul>
           </nav>
-          <!-- <nav>
-            <h3>DC Comics</h3>
-            <ul>
-              <li><a href="#">Characters</a></li>
-              <li><a href="#">Comics</a></li>
-              <li><a href="#">Movies</a></li>
-              <li><a href="#">Tv</a></li>
-              <li><a href="#">Games</a></li>
-              <li><a href="#">Videos</a></li>
-              <li><a href="#">News</a></li>
-            </ul>
-            <h3>DC Comics</h3>
-            <ul>
-              <li><a href="#">Characters</a></li>
-              <li><a href="#">Comics</a></li>
-            </ul>
-          </nav>
-          <nav>
-            <h3>DC Comics</h3>
-            <ul>
-              <li><a href="#">Characters</a></li>
-              <li><a href="#">Comics</a></li>
-              <li><a href="#">Movies</a></li>
-              <li><a href="#">Tv</a></li>
-              <li><a href="#">Games</a></li>
-              <li><a href="#">Videos</a></li>
-              <li><a href="#">News</a></li>
-            </ul>
-          </nav> -->
         </div>
         <div id="footer-logo" class="col-2"></div>
       </div>
@@ -51,21 +22,12 @@
         </a>
         <nav>
           <h2>Follow Us</h2>
-          <a href="#"
-            ><img src="../assets/img/footer-youtube.png" alt="YT logo"
-          /></a>
-          <a href="#"
-            ><img src="../assets/img/footer-youtube.png" alt="YT logo"
-          /></a>
-          <a href="#"
-            ><img src="../assets/img/footer-youtube.png" alt="YT logo"
-          /></a>
-          <a href="#"
-            ><img src="../assets/img/footer-youtube.png" alt="YT logo"
-          /></a>
-          <a href="#"
-            ><img src="../assets/img/footer-youtube.png" alt="YT logo"
-          /></a>
+          <a v-for="social in socials" :key="social.icon" :href="social.href">
+            <img
+              :src="`../assets/img/footer-${social.icon}.png`"
+              :alt="social.alt"
+            />
+          </a>
         </nav>
       </div>
     </section>
@@ -77,6 +39,33 @@ export default {
   name: "Footer",
   data() {
     return {
+      socials: [
+        {
+          href: "#",
+          icon: "facebook",
+          alt: "Facebook Logo",
+        },
+        {
+          href: "#",
+          icon: "../assets/img/footer-twitter.png",
+          alt: "Twitter Logo",
+        },
+        {
+          href: "#",
+          icon: "../assets/img/footer-youtube.png",
+          alt: "YouTube Logo",
+        },
+        {
+          href: "#",
+          icon: "../assets/img/footer-pinterest.png",
+          alt: "Pinterest Logo",
+        },
+        {
+          href: "#",
+          icon: "../assets/img/footer-periscope.png",
+          alt: "Periscope Logo",
+        },
+      ],
       navs: [
         {
           title: "DC Comics",
