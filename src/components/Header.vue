@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="container">
     <figure>
       <img src="../assets/img/dc-logo.png" alt="DC Logo" />
     </figure>
@@ -32,6 +32,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 0;
 }
 
 ul {
