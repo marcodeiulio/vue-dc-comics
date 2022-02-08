@@ -36,7 +36,31 @@
         <div id="footer-logo" class="col-2"></div>
       </div>
     </section>
-    <section id="lower-footer"></section>
+    <section id="lower-footer">
+      <div class="container">
+        <a href="#" class="border">
+          <h2>Sign-up now!</h2>
+        </a>
+        <nav>
+          <h2>Follow Us</h2>
+          <a href="#"
+            ><img src="../assets/img/footer-youtube.png" alt="YT logo"
+          /></a>
+          <a href="#"
+            ><img src="../assets/img/footer-youtube.png" alt="YT logo"
+          /></a>
+          <a href="#"
+            ><img src="../assets/img/footer-youtube.png" alt="YT logo"
+          /></a>
+          <a href="#"
+            ><img src="../assets/img/footer-youtube.png" alt="YT logo"
+          /></a>
+          <a href="#"
+            ><img src="../assets/img/footer-youtube.png" alt="YT logo"
+          /></a>
+        </nav>
+      </div>
+    </section>
   </footer>
 </template>
 
@@ -47,20 +71,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-h3 {
-  text-transform: uppercase;
-  color: white;
-  margin: 20px 0;
-}
-
-nav {
-  margin-right: 50px;
-}
-
-.container {
-  display: flex;
-}
-
 #upper-footer {
   /* 
   TODO da modificare */
@@ -71,6 +81,20 @@ nav {
   background-repeat: no-repeat;
   background-size: cover;
 
+  .container {
+    display: flex;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    color: white;
+    margin: 20px 0;
+  }
+
+  nav {
+    margin-right: 50px;
+  }
+
   ul {
     list-style-type: none;
     li {
@@ -78,7 +102,6 @@ nav {
       a {
         padding: 10px 0;
         color: #797979;
-        text-decoration: none;
         &:hover {
           text-decoration: underline;
         }
@@ -101,7 +124,37 @@ nav {
   background-image: url(../assets/img/dc-logo-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 400px;
   background-position: center;
+}
+
+#lower-footer {
+  background-color: #303030;
+  height: 100px;
+  text-transform: uppercase;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  h2 {
+    color: white;
+    font-size: 1.2em;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > * {
+      margin-right: 10px;
+    }
+
+    h2 {
+      color: #0282f9;
+    }
+  }
 }
 </style>
