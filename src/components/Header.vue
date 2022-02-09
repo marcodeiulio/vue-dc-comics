@@ -67,7 +67,7 @@ ul {
       &.active,
       &.active {
         color: $main-color;
-        border-bottom: 5px solid blue;
+        border-bottom: 5px solid #0282f9;
       }
     }
   }

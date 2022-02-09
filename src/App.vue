@@ -2,6 +2,7 @@
   <div id="app">
     <Header />
     <Main />
+    <ShopDiv />
     <Footer />
   </div>
 </template>
@@ -10,6 +11,7 @@
 import Header from "./components/Header.vue";
 import Main from "./components/Main.vue";
 import Footer from "./components/Footer.vue";
+import ShopDiv from "./components/ShopDiv.vue";
 
 export default {
   name: "App",
@@ -17,6 +19,7 @@ export default {
     Header,
     Main,
     Footer,
+    ShopDiv,
   },
 };
 </script>
