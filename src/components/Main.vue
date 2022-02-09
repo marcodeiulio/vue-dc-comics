@@ -2,6 +2,8 @@
   <main>
     <section id="jumbotron"></section>
     <section id="comics-list">
+      <BigLabel>Current Series</BigLabel>
+      <SmallLabel>Load More</SmallLabel>
       <div class="container">
         <ComicCard
           v-for="(comic, index) in comics"
@@ -16,10 +18,14 @@
 
 <script>
 import ComicCard from "./ComicCard.vue";
+import BigLabel from "./BigLabel.vue";
+import SmallLabel from "./SmallLabel.vue";
 export default {
   name: "Main",
   components: {
     ComicCard,
+    BigLabel,
+    SmallLabel,
   },
   data() {
     return {
