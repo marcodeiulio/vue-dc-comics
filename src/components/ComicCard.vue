@@ -1,10 +1,10 @@
 <template>
-  <div class="comic-card">
+  <a href="#" class="comic-card">
     <figure>
       <img :src="thumb" :alt="series + ' Cover Image'" />
     </figure>
     <h5>{{ series }}</h5>
-  </div>
+  </a>
 </template>
 
 <script>
@@ -21,6 +21,12 @@ export default {
   flex-basis: calc(100% / 6);
   padding: 20px;
   height: 165px;
+  transition: transform 500ms;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: transform 500ms;
+  }
 
   figure {
     max-height: 100%;
