@@ -2,15 +2,17 @@
   <main>
     <section id="jumbotron"></section>
     <section id="comics-list">
-      <BigLabel>Current Series</BigLabel>
-      <SmallLabel>Load More</SmallLabel>
       <div class="container">
-        <ComicCard
-          v-for="(comic, index) in comics"
-          :key="index"
-          :thumb="comic.thumb"
-          :series="comic.series"
-        />
+        <BigLabel class="big-label">Current Series</BigLabel>
+        <div class="wrapper">
+          <ComicCard
+            v-for="(comic, index) in comics"
+            :key="index"
+            :thumb="comic.thumb"
+            :series="comic.series"
+          />
+        </div>
+        <SmallLabel class="small-label">Load More</SmallLabel>
       </div>
     </section>
   </main>
@@ -131,12 +133,31 @@ export default {
 }
 
 #comics-list {
-  height: 500px;
+  height: 450px;
   background-color: #1c1c1c;
+  padding-top: 25px;
 
-  .container {
+  .wrapper {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .container {
+    position: relative;
+
+    .big-label {
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: translate(0%, -100%);
+    }
+
+    .small-label {
+      position: absolute;
+      right: 50%;
+      bottom: 10%;
+      transform: translate(50%, 50%);
+    }
   }
 }
 </style>

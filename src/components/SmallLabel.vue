@@ -1,20 +1,20 @@
 <template>
-  <a href="#" class="big-label">
+  <a href="#" class="small-label">
     <slot></slot>
   </a>
 </template>
 
 <script>
 export default {
-  name: "BigLabel",
+  name: "SmallLabel",
 };
 </script>
 
 <style scoped lang="scss">
-.big-label {
+.small-label {
   display: inline-block;
   background-color: #0282f9;
-  padding: 15px 40px;
+  padding: 12px 40px;
 
   color: white;
   text-transform: uppercase;

@@ -14,7 +14,7 @@ export default {
 .big-label {
   display: inline-block;
   background-color: #0282f9;
-  padding: 15px 25px;
+  padding: 12px 25px;
 
   color: white;
   text-transform: uppercase;
