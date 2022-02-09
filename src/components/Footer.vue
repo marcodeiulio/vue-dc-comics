@@ -122,6 +122,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import url("../assets/sass/style.scss");
+@import url("../assets/sass/_vars.scss");
 #upper-footer {
   height: 450px;
   width: 100%;
