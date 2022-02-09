@@ -1,13 +1,21 @@
 <template>
   <main>
     <section id="jumbotron"></section>
-    <section id="games-list"></section>
+    <section id="games-list">
+      <div class="container">
+        <GameCard />
+      </div>
+    </section>
   </main>
 </template>
 
 <script>
+import GameCard from "./GameCard.vue";
 export default {
   name: "Main",
+  components: {
+    GameCard,
+  },
 };
 </script>
 
@@ -19,5 +27,15 @@ export default {
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+#games-list {
+  height: 450px;
+  background-color: #1c1c1c;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 </style>
