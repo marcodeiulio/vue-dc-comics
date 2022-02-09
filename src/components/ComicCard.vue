@@ -19,8 +19,9 @@ export default {
   color: white;
 
   flex-basis: calc(100% / 6);
-  padding: 20px;
   height: 165px;
+  padding: 20px;
+  margin-bottom: 20px;
   transition: transform 500ms;
 
   &:hover {

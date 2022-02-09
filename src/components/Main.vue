@@ -133,7 +133,7 @@ export default {
 }
 
 #comics-list {
-  height: 450px;
+  height: 500px;
   background-color: #1c1c1c;
   padding-top: 25px;
 
