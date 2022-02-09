@@ -1,6 +1,7 @@
 <template>
   <main>
-    <div class="container">Content Goes Here</div>
+    <section id="jumbotron"></section>
+    <section id="games-list"></section>
   </main>
 </template>
 
@@ -10,10 +11,13 @@ export default {
 };
 </script>
 
-<style scoped>
-main {
-  padding: 50px;
-  background-color: #000;
-  color: white;
+<style scoped lang="scss">
+#jumbotron {
+  height: 300px;
+  width: 100%;
+  background-image: url(../assets/img/jumbotron.jpg);
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 </style>
