@@ -1,7 +1,7 @@
 <template>
-  <div class="big-label">
+  <a href="#" class="big-label">
     <slot></slot>
-  </div>
+  </a>
 </template>
 
 <script>
