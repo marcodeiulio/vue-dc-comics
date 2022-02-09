@@ -1,20 +1,20 @@
 <template>
   <main>
     <section id="jumbotron"></section>
-    <section id="games-list">
+    <section id="comics-list">
       <div class="container">
-        <GameCard />
+        <ComicCard />
       </div>
     </section>
   </main>
 </template>
 
 <script>
-import GameCard from "./GameCard.vue";
+import ComicCard from "./ComicCard.vue";
 export default {
   name: "Main",
   components: {
-    GameCard,
+    ComicCard,
   },
 };
 </script>
@@ -29,7 +29,7 @@ export default {
   background-repeat: no-repeat;
 }
 
-#games-list {
+#comics-list {
   height: 450px;
   background-color: #1c1c1c;
 
